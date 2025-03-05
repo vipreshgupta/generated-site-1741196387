@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find your dream job in India. Search and apply for the latest job openings.">
+    <meta name="keywords" content="jobs, India, career, employment, vacancies, job search">
+    <title>Indian Job Portal</title>
+    <style>
+        /* Color Scheme */
+        :root {
+            --saffron: #FF9933;
+            --deep-blue: #003366;
+            --vibrant-green: #28A745;
+            --terracotta: #E2725B;
+            --white: #FFFFFF;
+            --light-gray: #F5F5F5;
+            --dark-gray: #343A40;
+            --orange: #FFA500;
+        }
+
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Layout */
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--deep-blue);
+            color: var(--white);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            float: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header nav {
+            float: right;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 1.5rem;
+        }
+
+        header nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: var(--saffron);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        /* Search Section */
+        .search-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-section input[type="text"] {
+            padding: 0.8rem;
+            width: 60%;
+            border: 1px solid var(--dark-gray);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .search-section button {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--saffron);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-section button:hover {
+            background-color: var(--orange);
+        }
+
+        /* Job Listings */
+        .job-listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .job-card {
+            background-color: var(--white);
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card h3 {
+            color: var(--deep-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .job-card p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .job-card .location {
+            color: var(--vibrant-green);
+        }
+
+        .job-card .company {
+            font-style: italic;
+        }
+
+        .job-card a {
+            display: inline-block;
+            background-color: var(--vibrant-green);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .job-card a:hover {
+            background-color: var(--deep-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Accessibility */
+        a[href],
+        button {
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .logo {
+                float: none;
+                text-align: center;
+            }
+
+            header nav {
+                float: none;
+                text-align: center;
+            }
+
+            header nav ul li {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .search-section input[type="text"] {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Indian Job Portal</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Companies</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="container">
+                <input type="text" placeholder="Search for jobs..." aria-label="Search for jobs">
+                <button>Search</button>
+            </div>
+        </section>
+
+        <section class="job-listings">
+            <div class="container">
+                <!-- Job Card Example -->
+                <div class="job-card">
+                    <h3>Software Engineer</h3>
+                    <p class="company">Tech Solutions Pvt Ltd</p>
+                    <p class="location">Bangalore, Karnataka</p>
+                    <p>We are looking for a skilled software engineer to join our team.</p>
+                    <a href="#" aria-label="Apply for Software Engineer position">Apply Now</a>
+                </div>
+
+                <div class="job-card">
+                    <h3>Data Analyst</h3>
+                    <p class="company">Data Insights Inc</p>
+                    <p class="location">Mumbai, Maharashtra</p>
+                    <p>Looking for a Data Analyst with experience in data visualization and statistical analysis.</p>
+                    <a href="#" aria-label="Apply for Data Analyst position">Apply Now</a>
+                </div>
+                <div class="job-card">
+                    <h3>Data Analyst</h3>
+                    <p class="company">Data Insights Inc</p>
+                    <p class="location">Mumbai, Maharashtra</p>
+                    <p>Looking for a Data Analyst with experience in data visualization and statistical analysis.</p>
+                    <a href="#" aria-label="Apply for Data Analyst position">Apply Now</a>
+                </div>
+                <div class="job-card">
+                    <h3>Data Analyst</h3>
+                    <p class="company">Data Insights Inc</p>
+                    <p class="location">Mumbai, Maharashtra</p>
+                    <p>Looking for a Data Analyst with experience in data visualization and statistical analysis.</p>
+                    <a href="#" aria-label="Apply for Data Analyst position">Apply Now</a>
+                </div>
+                <div class="job-card">
+                    <h3>Data Analyst</h3>
+                    <p class="company">Data Insights Inc</p>
+                    <p class="location">Mumbai, Maharashtra</p>
+                    <p>Looking for a Data Analyst with experience in data visualization and statistical analysis.</p>
+                    <a href="#" aria-label="Apply for Data Analyst position">Apply Now</a>
+                </div>
+
+                <!-- More job cards can be added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 Indian Job Portal. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
